@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #843c3c;
+}
+/* CSS dùng cho khung */
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* CSS cho màu sắc máy nghe nhạc */
+.music-player{
+    background-color: #d69393;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+/* Ô tròn cho các nút */
+nav .circle{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(210, 9, 9);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+/* Vòng tròn cho thumbnail, khung hình */
+.song-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 2px 5px rgba(222, 118, 118, 0.3);
+}
+/* Tiêu đề tên bài hát */
+.music-player h1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+/* Tên nghệ sĩ */
+.music-player p{
+    font-size: 0.9rem;
+    color: #000000;
+}
+/* CSS cho thanh thời lượng */
+#progress{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background-color: #fe0606;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+/* CSS điều chinh nút chạy trên thanh thời lượng */
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #ff0303;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* CSS Nút điều khiển */
+.controls div{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ff0000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.controls div:nth-child(2){
+    transform: scale(1.5);
+    background-color: #ff0000;
+    color: white;
+}

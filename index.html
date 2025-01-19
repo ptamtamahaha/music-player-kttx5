@@ -3,20 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tính Tuổi</title>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5429aea8d5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- KHUNG MUSIC PLAYER -->
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <!-- Nguồn hình thumbnail và nguồn audio -->
+                <img src="media/DSCF3354.JPG"alt="Song Thumbnail" class="song-img">
+            <h1>Fly Me To The Moon (Cover)</h1>
+            <p>GZ25</p>
+            <audio  id="song">
+            <source src="media/fly me to the moon-gz25.mp3"type="audio/mpeg">
+            </audio>
+            <!-- Thanh thời lượng và các nut play, pause, next và reverse bài -->
+            <input type="range" id="progress" value="0">
+            <div class="controls">
+                <div>
+                    <i class="fa-solid fa-backward"></i>      
+                </div>
+                <!-- Nút bấm play/pause bài -->
+                <div onclick="playPause()">
+                    <i class="fa-solid fa-play" id="control-icon"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dẫn nguồn code JS -->
     <script src="main.js"></script>
-    <h1>Nhập Năm Sinh Của Bạn</h1>
-
-<label for="yearOfBirth">Năm sinh:</label>
-<input type="number" id="yearOfBirth" name="yearOfBirth"><br><br>
-
-<button onclick="calculateAge()">Tính Tuổi</button>
-
-<p id="result"></p>
-
-
-
 </body>
 </html>
